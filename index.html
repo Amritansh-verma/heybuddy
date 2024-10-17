@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f1e5; /* Light beige */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #6f4c3e; /* Dark brown */
+            color: #fff;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        #profile-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #details {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        #my-image {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        #works-area {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            height: 300px; /* Fixed height for scrollable area */
+            overflow-y: scroll; /* Vertical scrollbar */
+        }
+
+        .work-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .work-item:last-child {
+            border-bottom: none;
+        }
+
+        button {
+            background-color: #6f4c3e; /* Dark brown */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #5a3c31; /* Darker brown */
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            #profile-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            #details {
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="b.png" alt="Welcoming Boy" width="100" style="border-radius: 50%;">
+    <div>
+        <h1>Welcome to My Profile!</h1>
+        <h2>"Coding is my passion and my profession."</h2>
+    </div>
+</header>
+
+<div id="profile-container">
+    <div id="details">
+        <h3>Name :Amritansh Verma</h3>
+        <p><strong>Email:</strong> amritanshverma629@gamil.com</p>
+        <p><strong>Phone no:</strong> 9935234401</p>
+        <p><strong>About Me:</strong> Hello, I'm a passionate coder with a knack for solving complex problems. My journey revolves around creating innovative solutions, constantly learning, and pushing the boundaries of technology</p>
+    </div>
+    <img id="my-image" src="am.jpg" alt="Your Image"> <!-- Replace with your image URL -->
+</div>
+
+<div id="works-area">
+    <h3>My Works(will be added soon)</h3>
+    <div class="work-item">Project 1: Description of the project.</div>
+    <div class="work-item">Project 2: Description of the project.</div>
+    <div class="work-item">Project 3: Description of the project.</div>
+    <div class="work-item">Project 4: Description of the project.</div>
+    <div class="work-item">Project 5: Description of the project.</div>
+    <div class="work-item">Project 6: Description of the project.</div>
+    <div class="work-item">Project 7: Description of the project.</div>
+    <div class="work-item">Project 8: Description of the project.</div>
+    <div class="work-item">Project 9: Description of the project.</div>
+    <div class="work-item">Project 10: Description of the project.</div>
+    <div class="work-item">Project 11: Description of the project.</div>
+    <div class="work-item">Project 12: Description of the project.</div>
+    <div class="work-item">Project 13: Description of the project.</div>
+    <div class="work-item">Project 14: Description of the project.</div>
+    <div class="work-item">Project 15: Description of the project.</div>
+</div>
+
+<footer>
+    <footer>
+        <a href="notes.html">
+            <button>Notes</button>
+        </a>
+    </footer>
+    
+   
+</footer>
+
+</body>
+</html>

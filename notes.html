@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f1e5;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        /* Header with 'My Notes' */
+        header {
+            background-color: #6f4c3e; /* Dark brown */
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Tabs styling */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #8b6b61; /* Lighter brown */
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+
+        .tab {
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            background-color: #e8d7ce; /* Soft beige */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+            color: #4d2f28; /* Dark text for contrast */
+        }
+
+        .tab:hover {
+            background-color: #f1ebe1;
+            transform: translateY(-5px);
+        }
+
+        .tab.active {
+            background-color: #6f4c3e; /* Darker active tab */
+            color: white;
+        }
+
+        /* Notes content area */
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 10px;
+            animation: contentFadeIn 0.5s ease;
+        }
+
+        @keyframes contentFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Scrollable area */
+        .scrollable {
+            height: 400px; /* Scrollable height */
+            overflow-y: auto;
+            margin: 0 20px;
+        }
+
+        /* Scrollbar styling */
+        .scrollable::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .scrollable::-webkit-scrollbar-thumb {
+            background-color: #6f4c3e;
+            border-radius: 10px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tab {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    My Notes
+</header>
+
+<!-- Tabs section -->
+<div class="tabs">
+    <div class="tab active" onclick="openTab('java')">Java</div>
+    <div class="tab" onclick="openTab('python')">Python</div>
+    <div class="tab" onclick="openTab('javascript')">JavaScript</div>
+    <div class="tab" onclick="openTab('html')">HTML</div>
+    <div class="tab" onclick="openTab('css')">CSS</div>
+    <div class="tab" onclick="openTab('kotlin')">Kotlin</div>
+</div>
+
+<!-- Tab contents section -->
+<div class="scrollable">
+    <div id="java" class="tab-content" style="display: block;">
+        <h3>Java Notes</h3>
+        <pre>
+            
+            1. Java Overview
+            - Java  ek high-level, object-oriented programming language hai, jo 1995 mein Sun Microsystems (Oracle) dwara launch ki gayi thi.
+            - Java ko "write once, run anywhere" ke principle par design kiya gaya hai, jo iska portability feature dikhata hai.
+            
+            
+             2. Java Development Environment
+            - Java Development Kit (JDK): Java programming ke liye zaroori tools ka set hota hai, jisme Java compiler aur runtime environment shamil hote hain.
+            -Java Runtime Environment (JRE): Yeh Java applications ko run karne ke liye required environment provide karta hai.
+            - Integrated Development Environment (IDE): Popular IDEs hain Eclipse, IntelliJ IDEA, aur NetBeans, jo code likhne aur debugging karne mein madad karte hain.
+            
+            
+             3. Basic Syntax
+            
+             Hello World Program java
+            public class HelloWorld {
+                public static void main(String[] args) {
+                    System.out.println("Hello, World!");
+                }
+            }
+            
+            
+            public class HelloWorld : Class declaration. Java mein sab kuch classes ke andar hota hai.
+            
+            public static void main(String[] args): Main method, jo program execution ka entry point hota hai.
+            
+            System.out.println(): Console par output display karne ke liye use hota hai.
+            
+            
+             4. Data Types
+            Java mein 2 tarah ke data types hote hain:
+            
+            
+             a. Primitive Data Types
+            
+            int: Integer values ke liye (4 bytes).
+            
+            double: Decimal values ke liye (8 bytes).
+            
+            char: Single characters ke liye (2 bytes).
+            
+            boolean: true ya false values ke liye (1 bit).
+            
+            
+            b. Non-Primitive Data Types
+            
+            - String: Characters ka sequence. Strings immutable hote hain.
+            
+            - Arrays: Same type ke multiple values store karne ke liye.
+            
+            - Classes: Custom data types, jo objects banate hain.
+            
+            
+             5. Variables
+            
+            Declaration: Type ke saath variable ka naam define karna.
+            
+            int age; // Declaration
+            age = 25; // Initialization
+            
+            
+            Combined Declaration and Initialization:
+            
+            int age = 25; // Declaration and Initialization
+            
+            
+            
+             6. Operators
+            Java mein different types ke operators hote hain:
+            
+            
+            a. Arithmetic Operators
+            
+            + (Addition)
+            
+            - (Subtraction)
+            
+            \ (Multiplication)
+            
+            / (Division)
+            
+            % (Modulus)
+            
+            
+             b. Relational Operators
+            
+            == (Equal to)
+            
+            != (Not equal to)
+            
+            > (Greater than)
+            
+            <(Less than)
+            
+            >= (Greater than or equal to)
+            
+             <=(Less than or equal to)
+            
+            
+             c. Logical Operators
+            - && (Logical AND)
+            - || (Logical OR)
+            - ! (Logical NOT)
+            
+            
+            
+             7. Control Structures
+            
+             a.Conditional Statements
+            
+            - if Statement:
+            if (condition) {
+                // code block if true
+            }
+            
+            - if-else Statement:
+            
+            if (condition) {
+                // code block if true
+            } else {
+                // code block if false
+            }
+            
+            
+            - switch Statement:
+            
+            switch (variable) {
+                case value1:
+                    // code block
+                    break;
+                case value2:
+                    // code block
+                    break;
+                default:
+                    // code block
+            }
+            
+            
+            
+             b. Loops
+            
+            - for Loop:
+            
+            for (initialization; condition; update) {
+                // code block
+            }
+            
+            
+            - while Loop:
+            
+            while (condition) {
+                // code block
+            }
+            ```
+            
+            - do-while Loop:
+            
+            do {
+                // code block
+            } while (condition);
+            ```
+            
+            
+            8. Comments
+            Java mein comments add karne ke liye:
+            -Single Line Comment: // This is a comment`
+            - Multi-Line Comment: /* This is a comment */`
+            
+            
+            9. Input and Output
+            
+            - Scanner Class: User input lene ke liye.
+            
+            import java.util.Scanner;
+            
+            public class InputExample {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter your name: ");
+                    String name = scanner.nextLine();
+                    System.out.println("Hello, " + name);
+                    scanner.close();
+                }
+            }
+            ```
+            
+            
+             10. Basic Exception Handling
+            
+            - try-catch Block: Errors ko handle karne ke liye.
+            
+            try {
+                // code that may throw an exception
+            }
+             catch (ExceptionType e) {
+                // exception handling code
+            }
+            
+            </pre>
+    </div>
+
+    <div id="python" class="tab-content">
+        <h3>Python Notes</h3>
+        <p>Python is a high-level programming language that is widely used for web development, data science...</p>
+    </div>
+
+    <div id="javascript" class="tab-content">
+        <h3>JavaScript Notes</h3>
+        <p>JavaScript is a scripting language that enables dynamic content on websites...</p>
+    </div>
+
+    <div id="html" class="tab-content">
+        <h3>HTML Notes</h3>
+        <p>HTML stands for HyperText Markup Language and is used to structure web pages...</p>
+    </div>
+
+    <div id="css" class="tab-content">
+        <h3>CSS Notes</h3>
+        <p>CSS (Cascading Style Sheets) is used to style and layout web pages...</p>
+    </div>
+
+    <div id="kotlin" class="tab-content">
+        <h3>Kotlin Notes</h3>
+        <p>Kotlin is a modern, statically typed programming language used for Android development...</p>
+    </div>
+</div>
+
+<script>
+    // Function to handle tab switching
+    function openTab(tabName) {
+        const tabs = document.querySelectorAll('.tab-content');
+        const tabButtons = document.querySelectorAll('.tab');
+        
+        tabs.forEach(tab => tab.style.display = 'none');
+        tabButtons.forEach(button => button.classList.remove('active'));
+
+        document.getElementById(tabName).style.display = 'block';
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
